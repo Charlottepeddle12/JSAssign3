@@ -7,7 +7,7 @@ export default function Home() {
     <div>
       <h1>Rick and Morty page</h1>
       <Image src={logo} height={300} width={500} alt="Rick And Morty Logo"/>
-      <Link href ="/characters">Check out the characters here</Link>
+      <Link href ="/characters">Check out the characters here!</Link>
     </div>
   );
 }
