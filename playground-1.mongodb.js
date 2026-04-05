@@ -2,35 +2,24 @@
 // Use Ctrl+Space inside a snippet or a string literal to trigger completions.
 
 // The current database to use.
-use("video_games");
+use("rickmorty");
 
-/*db.getCollection("my_games").insertMany(
+db.getCollection("characters").insertMany(
     [
     {
-        "id": 1,
-        "title": "Legend of Zelda",
-        "genre": "Adventure",
-        "releaseYear": 1986,
-        "platform": "Nintendo Entertainment System"
+        "name": "Rick Sanchez",
+        "species": "Human",
+        "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
     },
     {
-        "id": 2,
-        "title": "Super Mario Bros.",
-        "genre": "Platformer",
-        "releaseYear": 1985,
-        "platform": "Nintendo Entertainment System"
-    },
-    {
-        "id": 3,
-        "title": "Minecraft",
-        "genre": "Sandbox",
-        "releaseYear": 2011,
-        "platform": "Multiple"
+        "name": "Morty Smith",
+        "species": "Human",
+        "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
     }
     ]
-)*/
+)
 
-console.log(db.collection("my_games").find({}));
+console.log(db.getCollection("characters").find({}));
 
 
 // Find a document in a collection.

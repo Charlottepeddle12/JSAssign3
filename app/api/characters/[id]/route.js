@@ -5,11 +5,11 @@ export async function GET(request,{params}) {
     const {db} = await connectToDB();
     const {id} = await params;
 
-    const currentGame = await db.collection("my_games").findOne({id: parseInt(id)});
-    if (!currentGame) {
-        return new Response("Game not found", {status: 404});
+    const currentCharacter = await db.collection("characters").findOne({id: parseInt(id)});
+    if (!currentCharacter) {
+        return new Response(JSON.stringify("Character not found"), {status: 404});
     }
-    return new Response(JSON.stringify(currentGame), 
+    return new Response(JSON.stringify(currentCharacter), 
         {status: 200,
         headers: { 'Content-Type' : 'application/json'  
         }

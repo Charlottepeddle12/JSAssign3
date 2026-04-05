@@ -1,11 +1,13 @@
 import Image from "next/image";
+import logo from "@/public/images/logo.jpg"
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <>
-      <h2>Erics Video Game Collection</h2>
-      <p>Welcome to the page, checkout some of the games</p>
-      <Image alt="Eric" src="/Eric.jpg" width={200} height={200}></Image>
-    </>
+    <div>
+      <h1>Rick and Morty page</h1>
+      <Image src={logo} height={300} width={500} alt="Rick And Morty Logo"/>
+      <Link href ="/characters">Check out the characters here!</Link>
+    </div>
   );
 }

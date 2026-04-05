@@ -3,7 +3,7 @@ export default function Header() {
     return (
         <>
         <Link href="/">Home</Link>
-        <Link href="/games">Games</Link>
+        <Link href="/games">Characters</Link>
         </>
     )
 }
