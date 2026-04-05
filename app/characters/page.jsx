@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Character from "@/components/Character";
 
 export default async function Characters() {
 
@@ -10,8 +11,14 @@ export default async function Characters() {
         <>
         <h2>Characters</h2>
         <ul>
-            { data.map((character) => {   
-                return <li key={character.id}><Link href={"/characters/" + character.id} >{character.name}</Link></li>
+            { data.map((character) => {  
+                return(
+                <>
+                    <Character data={character} />
+                    <li key={character.id}><Link href={"/characters/" + character.id}>View {character.name} here</Link></li>
+                    <br/>
+                </>
+            )
             })}
         </ul>
         </>
