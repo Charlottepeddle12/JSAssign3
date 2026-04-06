@@ -15,16 +15,3 @@ export async function GET(request,{params}) {
         }
     });
 }
-
-export async function DELETE(request, {params}) {
-    const {db} = await connectToDB();
-    const {id} = await params;
-    const deleteResult = await db.collection("my_games").deleteOne({id: parseInt(id)});
-    const returnString = deleteResult.deletedCount === 1 ? "Game deleted successfully" : "Game not found";
-    return new Response(
-        returnString,
-        {
-            status: 200,
-        }
-    )
-}
